@@ -1,0 +1,11 @@
+{
+  "name": "stocksync",
+  "version": "1.0.0",
+  "description": "StockSync é um sistema de gestão de estoque e vendas projetado para lojas físicas, oferecendo um conjunto abrangente de ferramentas para controle preciso do estoque, gerenciamento de vendas e otimização de processos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Filipe Marques Hottis",
+  "license": "ISC"
+}
