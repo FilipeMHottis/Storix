@@ -1,8 +1,8 @@
-# StockSync
+# Storix
 
 ## Descrição
 
-StockSync é um sistema de gestão de estoque e vendas projetado para lojas físicas, oferecendo um conjunto abrangente de ferramentas para controle preciso do estoque, gerenciamento de vendas e otimização de processos.
+Storix é um sistema de gestão de estoque e vendas projetado para lojas físicas, oferecendo um conjunto abrangente de ferramentas para controle preciso do estoque, gerenciamento de vendas e otimização de processos.
 
 <details>
 <summary><b>Linguagens a Serem Usadas</b></summary>
