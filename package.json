@@ -4,7 +4,11 @@
   "description": "StockSync é um sistema de gestão de estoque e vendas projetado para lojas físicas, oferecendo um conjunto abrangente de ferramentas para controle preciso do estoque, gerenciamento de vendas e otimização de processos.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:front": "cd src/frontend && npm install",
+    "install:back": "cd src/backend && npm install",
+    "install:all": "npm run install:front && npm run install:back",
+    "start": "cd src/ && docker-compose up -d",
+    "stop": "cd src/ && docker-compose down"
   },
   "author": "Filipe Marques Hottis",
   "license": "ISC"

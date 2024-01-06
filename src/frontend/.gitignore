@@ -1,0 +1,17 @@
+# Arquivos gerados pela execução de comandos
+node_modules/
+build/
+
+# Arquivos de ambiente
+.env
+
+# Arquivos de compilação TypeScript
+*.js
+*.js.map
+
+# Arquivos de configuração local (se aplicável)
+config.local.js
+
+# Outros arquivos gerados pelo sistema ou por editores
+.DS_Store
+.vscode/
