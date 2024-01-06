@@ -9,6 +9,12 @@ services:
       - "3001:3001"
     volumes:
       - ./backend:/usr/src/app
+    environment:
+      - PORT=3001
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123456
+      - MYSQL_DB=stocksync
     depends_on:
       - mysql
 
@@ -20,17 +26,17 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend:/usr/src/app
+    environment:
+      - PORT=3000
     depends_on:
       - backend
 
   mysql:
-    image: mysql:latest
+    image: mysql:8.0.32
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: examplepassword
-      MYSQL_DATABASE: yourdatabasename
-      MYSQL_USER: yourusername
-      MYSQL_PASSWORD: yourpassword
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: stocksync
     volumes:
       - mysql-data:/var/lib/mysql
 
