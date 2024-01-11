@@ -1,17 +1,25 @@
-# Arquivos gerados pela execução de comandos
-node_modules/
-build/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Arquivos de ambiente
-.env
+node_modules
+dist
+dist-ssr
+.vscode
+*.local
 
-# Arquivos de compilação TypeScript
-*.js
-*.js.map
-
-# Arquivos de configuração local (se aplicável)
-config.local.js
-
-# Outros arquivos gerados pelo sistema ou por editores
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

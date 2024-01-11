@@ -1,13 +1,13 @@
 FROM node:20.10.0-alpine3.19
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package*.json ./
+COPY package.json .
 
 RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD [ "npm", "run", "dev" ]
