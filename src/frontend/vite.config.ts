@@ -12,8 +12,7 @@ export default defineConfig({
   },
   server: {
     port: PORT,
-    host: true,
-    origin: `http://0.0.0.0:${PORT}`,
+    host: true  
   },
   plugins: [react()],
 })
