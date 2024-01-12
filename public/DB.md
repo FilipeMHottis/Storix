@@ -17,7 +17,8 @@
 | name             | VARCHAR    | Product's name                                    |
 | minQuantity      | INT        | Minimum quantity allowed in stock                  |
 | currentQuantity  | INT        | Current quantity in stock                          |
-| value            | DECIMAL    | Product's value                                   |
+| price            | DECIMAL    | Product's value                                   |
+| image            | VARCHAR    | Product's Image                                   |
 
 ### 03. Table Tags:
 
@@ -32,7 +33,6 @@
 |----------------|-----------|----------------------------------------|
 | id             | INT       | Unique identifier for the barcode       |
 | barcode        | VARCHAR   | Barcode number                         |
-| productId      | INT       | Foreign key referencing Table Product  |
 
 ### 05. Table Product_Tags (Intermediate Table):
 
@@ -63,36 +63,16 @@
 | saleId         | INT       | Foreign key referencing Table Sales History |
 | productId      | INT       | Foreign key referencing Table Product    |
 | quantity       | INT       | Quantity of product sold                 |
-| totalPrice     | DECIMAL   | Total price of the product sold          |
+| price          | DECIMAL   | Total price of the product sold          |
+| discount          | DECIMAL   | Total discount of the product sold          |
 
-### 09. Tabela Tags (para armazenar as tags):
-
-| Field   | Type     | Description               |
-|---------|----------|---------------------------|
-| tag_id  | INT      | Unique identifier for the tag|
-| tag_name| VARCHAR  | Tag name                  |
-
-### 10. Tabela Product_Tags (para relacionar produtos com tags):
-
-| Field       | Type  | Description                             |
-|-------------|-------|-----------------------------------------|
-| product_id  | INT   | Foreign key referencing Table Product   |
-| tag_id      | INT   | Foreign key referencing Table Tags      |
-
-### 11. Tabela Discount_Rules (regras de descontos disponíveis):
+### 09. Tabela Discount_Rules (regras de descontos disponíveis):
 
 | Field               | Type     | Description                             |
 |---------------------|----------|-----------------------------------------|
-| rule_id             | INT      | Unique identifier for the discount rule |
-| rule_description    | VARCHAR  | Description of the discount rule        |
-| rule_type           | VARCHAR  | Type of discount (percentage, value, quantity) |
-| rule_value          | DECIMAL  | Value of the discount                    |
-| min_quantity        | INT      | Minimum quantity of products for the discount |
-
-### 12. Tabela Discount_Usage (utilização de desconto por compra):
-
-| Field               | Type     | Description                                |
-|---------------------|----------|--------------------------------------------|
-| usage_id            | INT      | Unique identifier for discount usage        |
-| rule_id             | INT      | Foreign key referencing Table Discount_Rules |
-| purchase_id         | INT      | Purchase identifier                         |
+| id                | INT      | Unique identifier for the discount rule |
+| description       | VARCHAR  | Description of the discount rule        |
+| code      | VARCHAR      | Code for using                          |
+| type              | VARCHAR  | Type of discount (percentage, value, quantity) |
+| value             | DECIMAL  | Value of the discount                    |
+| min_quantity      | INT      | Minimum quantity of products for the discount |
