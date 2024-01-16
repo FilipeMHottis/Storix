@@ -7,9 +7,9 @@ type Payload = {
     email: string;
 };
 
-const generatorToken = (payload: Payload) => jwt.sign(payload, secret, { expiresIn: '1h' });
-const verifyToken = (token: string) => jwt.verify(token, secret);
-const decodeToken = (token: string) => jwt.decode(token);
+const generatorToken = async (payload: Payload) => jwt.sign(payload, secret, { expiresIn: '1h' });
+const verifyToken = async (token: string) => jwt.verify(token, secret);
+const decodeToken = async (token: string) => jwt.decode(token);
 
 export default {
     generatorToken,
