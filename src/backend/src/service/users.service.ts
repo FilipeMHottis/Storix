@@ -25,6 +25,7 @@ const login: (e: string, p: string) => Promise<ServiceResponse<LoginResponse>> =
     }
 
     const token = await jwt.generatorToken({ id: user.id, email: user.email });
+    console.log(token);
 
     return {
         status: 'success', data: { token },

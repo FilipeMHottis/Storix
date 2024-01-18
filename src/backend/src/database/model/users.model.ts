@@ -8,28 +8,22 @@ export type UserSequelize = Model<Users, UsersSequelizeModelCreator>;
 
 const UsersSequelizeModel: UsersSequelizeModelCreator = db.define('Users', {
     id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-    },
-    displayName: {
-        type: DataTypes.STRING,
         allowNull: false,
+        primaryKey: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+    },
+    username: {
+        allowNull: false,
+        type: DataTypes.STRING,
     },
     email: {
+        allowNull: false,
         type: DataTypes.STRING,
-        unique: true,
     },
     password: {
-        type: DataTypes.STRING,
         allowNull: false,
-    },
-    image: {
         type: DataTypes.STRING,
-    },
-    role: {
-        type: DataTypes.STRING,
-        allowNull: false,
     },
     }, {
     timestamps: false,

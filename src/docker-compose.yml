@@ -15,8 +15,12 @@ services:
       - MYSQL_USER=root
       - MYSQL_PASSWORD=123456
       - MYSQL_DB=stocksync
-      - MYSQL_HOST=localhost
       - MYSQL_PORT=3306
+      - ADMIN_USER=testUsername
+      - ADMIN_PASSWORD=123456
+      - ADMIN_EMAIL=testEmail@email.com
+      - JWT_SECRET=secret
+      - SALT_ROUNDS=10
     depends_on:
       - mysql
 

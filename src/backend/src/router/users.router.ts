@@ -17,8 +17,10 @@ const router = Router();
  *             properties:
  *               email:
  *                 type: string
+ *                 example: 'testEmail@email.com'
  *               password:
  *                 type: string
+ *                 example: '123456'
  *     responses:
  *       '200':
  *          description: Successful login
