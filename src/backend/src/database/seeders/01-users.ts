@@ -3,10 +3,8 @@ import bycript from '../../utils/bycript';
 
 const username = process.env.ADMIN_USERNAME || 'testUsername';
 const email = process.env.ADMIN_EMAIL || 'testEmail@email.com';
-const password = async () => {
-    const p = await bycript.hashPassword(process.env.ADMIN_PASSWORD || '123456');
-    return p;
-};
+const password = bycript.hashPassword(process.env.ADMIN_PASSWORD || '123456');
+
 
 export default {
     up: async (queryInterface: QueryInterface) => {
@@ -15,7 +13,7 @@ export default {
                 id: '1',
                 username,
                 email,
-                password: await password(),
+                password,
             },
         ], {});
     },

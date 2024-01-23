@@ -1,13 +1,9 @@
-import { Request, Response, Router } from 'express';
-import usersController from '../controller/users.controller';
-
-const router = Router();
-
 /**
  * @swagger
  * /users/login:
  *   post:
  *     summary: Login to the application
+ *     tags: [Users]
  *     requestBody:
  *       required: true
  *       content:
@@ -28,22 +24,11 @@ const router = Router();
  *              application/json:
  *                  example:
  *                      token: 'your-generated-token'
- *       '404':
- *          description: User not found
- *          content:
- *              application/json:
- *                  example:
- *                      error:
- *                          mensagem: 'Usuário não encontrado'
  *       '401':
  *          description: Unauthorized
  *          content:
  *              application/json:
  *                  example:
  *                      error:
- *                          mensagem: 'Senha incorreta'
+ *                          mensagem: 'User not found or Incorrect Email or Password'
  */
-
-router.post('/login', (req: Request, res: Response) => usersController.login(req, res));
-
-export default router;
