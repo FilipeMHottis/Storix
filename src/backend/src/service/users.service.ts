@@ -10,7 +10,7 @@ type LoginResponse = {
 const login: (e: string, p: string) => Promise<ServiceResponse<LoginResponse>> = async (e, p) => {
     const user = await userModel.userByEmail(e);
 
-    if (!user || !bycript.comparePassword(p, user.password)) {
+    if (!user || !await bycript.comparePassword(p, user.password)) {
         return {
             status: 'unauthorized',
             data: { error: { mensagem: 'User not found or Incorrect Email or Password' } },

@@ -1,5 +1,7 @@
-import usersRouter from './users/users.router';
+import usersRouter from './users.router';
+import productsRouter from './products.router';
 
 export default {
     usersRouter,
+    productsRouter,
 };

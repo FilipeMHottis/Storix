@@ -1,3 +1,8 @@
+import { Request, Response, Router } from 'express';
+import usersController from '../controller/users.controller';
+
+const router = Router();
+
 /**
  * @swagger
  * /users/login:
@@ -32,3 +37,7 @@
  *                      error:
  *                          mensagem: 'User not found or Incorrect Email or Password'
  */
+
+router.post('/login', (req: Request, res: Response) => usersController.login(req, res));
+
+export default router;

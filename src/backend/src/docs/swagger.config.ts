@@ -19,21 +19,19 @@ const options: swaggerJSDoc.Options = {
       },
     ],
     components: {
-      securitySchemas: {
+      securitySchemes: {
         bearerAuth: {
           type: 'http',
           scheme: 'bearer',
           bearerFormat: 'JWT',
         },
       },
-    },
-    security: [
-      {
+      security: {
         bearerAuth: [],
       },
-    ],
+    },
   },
-  apis: ['src/router/**/*.swagger.ts'],
+  apis: ['src/router/*.ts'],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
