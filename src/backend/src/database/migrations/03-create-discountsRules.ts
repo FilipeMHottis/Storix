@@ -32,6 +32,11 @@ export default {
                 type: DataTypes.INTEGER,
                 field: 'min_quantity',
             },
+            productNameOrTag: {
+                allowNull: false,
+                type: DataTypes.STRING,
+                field: 'product_name_or_tag',
+            },
         });
     },
     down(queryInterface: QueryInterface) {

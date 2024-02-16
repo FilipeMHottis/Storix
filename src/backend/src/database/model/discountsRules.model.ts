@@ -34,6 +34,11 @@ const RulesSequelizeModel: DiscountsRulesSequelizeModelCreator = db.define('Disc
         allowNull: false,
         field: 'min_quantity',
     },
+    productNameOrTag: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        field: 'product_name_or_tag',
+    },
     }, {
     timestamps: false,
     tableName: 'DiscountsRules',

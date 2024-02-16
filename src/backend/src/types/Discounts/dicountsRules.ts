@@ -5,6 +5,7 @@ type DiscountsRules = {
     type: string;
     value: number;
     minQuantity: number;
+    productNameOrTag: string;
 }
 
 export default DiscountsRules;

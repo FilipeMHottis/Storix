@@ -15,8 +15,8 @@
 |------------------|------------|--------------------------------------------------|
 | id               | INT        | Unique identifier for the product                  |
 | name             | VARCHAR    | Product's name                                    |
-| minQuantity      | INT        | Minimum quantity allowed in stock                  |
-| currentQuantity  | INT        | Current quantity in stock                          |
+| min_quantity      | INT        | Minimum quantity allowed in stock                  |
+| current_quantity  | INT        | Current quantity in stock                          |
 | price            | DECIMAL    | Product's value                                   |
 | image            | VARCHAR    | Product's Image                                   |
 
@@ -38,30 +38,30 @@
 
 | Field       | Type  | Description                             |
 |-------------|-------|-----------------------------------------|
-| productId   | INT   | Foreign key from Table Product           |
-| tagId       | INT   | Foreign key from Table Tags              |
+| product_id   | INT   | Foreign key from Table Product           |
+| tag_id       | INT   | Foreign key from Table Tags              |
 
 ### 06. Table Product_Barcode (Intermediate Table):
 
 | Field            | Type  | Description                       |
 |------------------|-------|-----------------------------------|
-| productId        | INT   | Foreign key from Table Product     |
-| barcodeId        | INT   | Foreign key from Table Barcode     |
+| product_id        | INT   | Foreign key from Table Product     |
+| barcode_id        | INT   | Foreign key from Table Barcode     |
 
 ### 07. Table Sales History:
 
 | Field          | Type      | Description                           |
 |----------------|-----------|---------------------------------------|
 | id             | INT       | Unique identifier for the sale         |
-| saleDate       | TIMESTAMP | Date and time of the sale              |
+| sale_date       | TIMESTAMP | Date and time of the sale              |
 
 ### 08. Table Sale_Details:
 
 | Field          | Type      | Description                              |
 |----------------|-----------|------------------------------------------|
 | id             | INT       | Unique identifier for the sale detail     |
-| saleId         | INT       | Foreign key referencing Table Sales History |
-| productId      | INT       | Foreign key referencing Table Product    |
+| sale_id         | INT       | Foreign key referencing Table Sales History |
+| product_id      | INT       | Foreign key referencing Table Product    |
 | quantity       | INT       | Quantity of product sold                 |
 | price          | DECIMAL   | Total price of the product sold          |
 | discount          | DECIMAL   | Total discount of the product sold          |
@@ -76,3 +76,4 @@
 | type              | VARCHAR  | Type of discount (percentage, value, quantity) |
 | value             | DECIMAL  | Value of the discount                    |
 | min_quantity      | INT      | Minimum quantity of products for the discount |
+| product_name_or_tag | VARCHAR | Name of product Descount or tag |

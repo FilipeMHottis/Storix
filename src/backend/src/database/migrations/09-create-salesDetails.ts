@@ -4,7 +4,7 @@ import SaleDeatails from '../../types/Sales/saleDetails';
 export default {
     // eslint-disable-next-line max-lines-per-function
     up(queryInterface: QueryInterface) {
-        return queryInterface.createTable<Model<SaleDeatails>>('SaleDeatails', {
+        return queryInterface.createTable<Model<SaleDeatails>>('SalesDetails', {
             saleId: {
                 allowNull: false,
                 primaryKey: true,
